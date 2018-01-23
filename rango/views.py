@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-        context_dict = {'boldmessage': "Rango, is, shite"}
+        context_dict = {'boldmessage': "Crunchy, creamy, cookie, candy, cupcake!"}
 
 
 
