@@ -27,16 +27,25 @@
 			<strong>There are no categories present.</strong>
 		{% endif %}
 		</div>
+		
+		<hr>		
+
+		<a href="/rango/add_category/"> Add a new Category </a>
+
+		<hr>
 
 
 		<div>
 
 		<h2> Most viewed Pages </h2>
-		{% if mostViewed%}
+		
+		
+		{% if pages %}
+		
 		<ul>
 			{% for page in pages %}
 				<li>
-				<a href ="/rango/page/{{page.slug}}">{{page.name}}</a>
+				<a href="{{ page.url }}">{{ page.title }}</a>
 				</li>
 			{% endfor %}
 		</ul>
@@ -44,6 +53,8 @@
 			<strong> there are no pages present. </strong>
 		{% endif %}
 		</div>
+
+
 
 	
 		
