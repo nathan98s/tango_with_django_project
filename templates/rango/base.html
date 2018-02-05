@@ -1,4 +1,6 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
+
+{% load rango_template_tags %}
 
  {% load staticfiles %}
 
@@ -16,6 +18,11 @@
  
 
 	<body>
+
+
+
+		
+
 		<div>
 		{% block body_block %}
 
@@ -34,6 +41,12 @@
  			<li><a href="{% url 'index' %}">Index</a></li>
  		</ul>
  		</div>
+
+		<div>
+			{% block sidebar_block %}
+				{% get_category_list category %}
+			{% endblock %}
+		</div>
 
 		 
  	</body>
